@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Vueでラジオボタンのコンポーネントを作る。</title>
+    <script src="../vue.3.0.5.min.js"></script>
+    <script src="./radio-button-component.js"></script>
+    <script src="./radio-button-list-component.js"></script>
+    <script src="./color-radio-button-component.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+<h1><a href="https://github.com/ytyaru/JS.Vue.3.0.5.RadioButtonComponent.20210123140243">Vueでラジオボタンのコンポーネントを作る。</a></h1>
+<div id="app">
+<!--    <color-radio-button-component></color-radio-button-component>-->
+    <radio-button-list-component
+        :name="color"
+        :checked_value="black"
+        :required="false"
+        :list="[
+            {id:'setting-color-white', value:'white', title:'背景白', text:'白'},
+            {id:'setting-color-black', value:'black', title:'背景黒', text:'黒'},
+            {id:'setting-color-red',   value:'red',   title:'背景赤', text:'赤'},
+        ]"
+    ></radio-button-list-component>
+</div>
+</body>
+</html>
