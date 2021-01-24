@@ -17,14 +17,14 @@ var RadioButtonEventListComponent = {
                     :title="item.title" 
                     :text="item.text"
                     :checked_value="checked_value"
-                    @update:checked_value="onChangeValue($event)"
+                    @update:checked_value="onUpdateCheckedValue($event)"
                 ></radio-button-event-component>
             </li>
         </ul>
     `,
     methods: {
-        onChangeValue(event) {
-            console.log('onChangeValue', event);
+        onUpdateCheckedValue(event) {
+            console.log('onUpdateCheckedValue', event);
             this.$emit('update:checked_value', event);
         }
     }

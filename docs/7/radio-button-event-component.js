@@ -16,13 +16,13 @@ var RadioButtonEventComponent = {
             :value="value" 
             :checked="checked" 
             :required="required"
-            @input="changeSave($event)"
+            @input="onInput($event)"
         >
         <label              :for="id" :title="title">{{text}}</label>
     `,
     methods: {
-        changeSave(event) {
-            console.log('changeSave', event.target.value);
+        onInput(event) {
+            console.log('onInput', event.target.value);
             this.$emit('update:checked_value', event.target.value);
         }
     }
